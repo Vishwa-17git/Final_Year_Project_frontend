@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results - JobShield AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">JobShield AI</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Detect Job</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Results Container -->
+    <div class="results-container">
+        <div class="container">
+            <div class="results-header">
+                <h1>Analysis Results</h1>
+                <p id="timestamp">Generated on: --</p>
+            </div>
+
+            <!-- Risk Score Card -->
+            <div class="risk-score-card">
+                <div class="score-visual">
+                    <div class="score-circle" id="scoreCircle">
+                        <div class="score-value" id="scoreValue">0</div>
+                        <div class="score-label">RISK SCORE</div>
+                    </div>
+                    <div class="score-info">
+                        <div class="risk-status" id="riskStatus">
+                            <span class="status-icon">❓</span>
+                            <span class="status-text">Analyzing...</span>
+                        </div>
+                        <div class="confidence-meter">
+                            <p>Confidence Level</p>
+                            <div class="meter-bar">
+                                <div class="meter-fill" id="confidenceFill" style="width: 0%"></div>
+                            </div>
+                            <p id="confidencePercent">0%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Analysis Sections -->
+            <div class="analysis-sections">
+                <!-- Text Analysis -->
+                <div class="analysis-card">
+                    <div class="card-header">
+                        <h2>📄 Text Analysis</h2>
+                        <span class="result-badge" id="textBadge">Analyzing...</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="findings-list" id="textFindings">
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Image Analysis -->
+                <div class="analysis-card">
+                    <div class="card-header">
+                        <h2>🖼️ Image Analysis</h2>
+                        <span class="result-badge" id="imageBadge">Analyzing...</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="findings-list" id="imageFindings">
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Link Analysis -->
+                <div class="analysis-card">
+                    <div class="card-header">
+                        <h2>🔗 Link Analysis</h2>
+                        <span class="result-badge" id="linkBadge">Analyzing...</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="findings-list" id="linkFindings">
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                            <li class="skeleton">
+                                <div class="skeleton-item"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Insights & Explanation -->
+            <div class="insights-section">
+                <h2>🤖 AI Insights & Recommendation</h2>
+                <div class="insights-card">
+                    <div id="explanation" class="explanation-text">
+                        <div class="skeleton">
+                            <div class="skeleton-item" style="width: 90%;"></div>
+                            <div class="skeleton-item" style="width: 85%;"></div>
+                            <div class="skeleton-item" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safety Tips -->
+            <div class="safety-tips-section">
+                <h2>🛡️ Safety Tips to Remember</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🚫</div>
+                        <h3>Never Pay Registration Fees</h3>
+                        <p>Legitimate jobs never ask for payment to apply or start working.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">✉️</div>
+                        <h3>Verify Company Email</h3>
+                        <p>Check if the email matches the official company domain (not Gmail or Yahoo).</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">☎️</div>
+                        <h3>Avoid WhatsApp-Only Communication</h3>
+                        <p>Professional recruiters use official channels, not just messaging apps.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🔎</div>
+                        <h3>Research the Company</h3>
+                        <p>Always verify the company's website, LinkedIn, and official social media.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🔗</div>
+                        <h3>Check URL Carefully</h3>
+                        <p>Look for slight spelling variations in URLs designed to mimic real companies.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">💼</div>
+                        <h3>Interview Process</h3>
+                        <p>Real employers conduct professional interviews, not just quick voice calls.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="results-actions">
+                <a href="dashboard.html" class="btn btn-primary">Analyze Another Job</a>
+                <button class="btn btn-secondary" onclick="window.print()">Print Results</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>JobShield AI</h4>
+                    <p>Protecting job seekers from scams with AI-powered analysis</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Detect Job</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>⚠️ <strong>Disclaimer:</strong> AI-based detection, results may vary. Always verify independently with the company.</p>
+                <p>&copy; 2026 JobShield AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/results.js"></script>
+</body>
+</html>

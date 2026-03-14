@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Dashboard - JobShield AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">JobShield AI</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html" class="active">Detect Job</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Job Posting Analysis</h1>
+                <p>Provide job details for AI-powered evaluation</p>
+            </div>
+
+            <!-- Detection Form -->
+            <div class="analysis-form-wrapper">
+                <form id="analyzeForm" class="analysis-form">
+                    <!-- Job Description Input -->
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h2>📄 Job Description</h2>
+                            <span class="section-subtitle">Paste the complete job posting</span>
+                        </div>
+                        <div class="form-group">
+                            <textarea 
+                                id="jobDescription" 
+                                class="job-textarea" 
+                                placeholder="Paste the job description here..."
+                                rows="8"></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0</span> / <span>5000</span> characters
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Upload Section -->
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h2>🖼️ Image Upload</h2>
+                            <span class="section-subtitle">Company logo, offer letter, or job poster (optional)</span>
+                        </div>
+                        <div id="dropZone" class="drop-zone">
+                            <input 
+                                id="imageInput" 
+                                type="file" 
+                                multiple 
+                                accept="image/*"
+                                style="display: none;">
+                            <div class="drop-zone-content">
+                                <div class="drop-icon">📤</div>
+                                <p>Drag and drop images here</p>
+                                <p class="drop-hint">or</p>
+                                <label for="imageInput" class="file-input-label">browse files</label>
+                                <p class="drop-hint">Supported: JPG, PNG, GIF (max 5MB per file)</p>
+                            </div>
+                        </div>
+                        <div id="imagePreview" class="image-preview"></div>
+                    </div>
+
+                    <!-- Job Link Input -->
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h2>🔗 Job Link</h2>
+                            <span class="section-subtitle">URL of the job posting</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <input 
+                                    id="jobLink" 
+                                    type="url" 
+                                    class="job-input" 
+                                    placeholder="https://example.com/job/..."
+                                    pattern="https?://.+">
+                                <span class="validation-icon" id="linkValidation"></span>
+                            </div>
+                            <small>Valid link will show a checkmark</small>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large" id="analyzeBtn">
+                            🔍 Analyze Job Posting
+                        </button>
+                        <button type="reset" class="btn btn-secondary">Clear All</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Info Box -->
+            <div class="info-box">
+                <div class="info-icon">ℹ️</div>
+                <div>
+                    <strong>Privacy Protected:</strong> Your data is encrypted and never stored on our servers. Analysis happens in real-time.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>JobShield AI</h4>
+                    <p>Protecting job seekers from scams with AI-powered analysis</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Detect Job</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>⚠️ <strong>Disclaimer:</strong> AI-based detection, results may vary. Always verify independently with the company.</p>
+                <p>&copy; 2026 JobShield AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

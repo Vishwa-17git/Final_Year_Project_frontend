@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start - JobShield AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #1e3a8a;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section ol, .section ul {
+            margin-left: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+        }
+        
+        .code-box {
+            background: #f5f5f5;
+            border-left: 4px solid #1e3a8a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            border-color: #1e3a8a;
+            box-shadow: 0 5px 15px rgba(30, 58, 138, 0.1);
+        }
+        
+        .feature-card h3 {
+            color: #1e3a8a;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #1e3a8a;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+        }
+        
+        .btn-secondary {
+            background: #e5e7eb;
+            color: #1e3a8a;
+        }
+        
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+        
+        .alert {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            color: #854d0e;
+        }
+        
+        .success {
+            background: #d1fae5;
+            border-left-color: #10b981;
+            color: #065f46;
+        }
+        
+        .warning {
+            background: #fee2e2;
+            border-left-color: #ef4444;
+            color: #7f1d1d;
+        }
+        
+        .footer {
+            background: #f3f4f6;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ JobShield AI</h1>
+            <p>Fake Job Detection System - Quick Start Guide</p>
+        </div>
+        
+        <div class="content">
+            <!-- Welcome Section -->
+            <div class="section">
+                <h2>✨ Welcome!</h2>
+                <p>You're about to explore a modern, professional web application designed to help job seekers detect fake job scams using AI-powered analysis. This guide will show you how to get started.</p>
+            </div>
+
+            <!-- Getting Started -->
+            <div class="section">
+                <h2>🚀 Getting Started</h2>
+                <ol>
+                    <li><strong>Start Here</strong> - Click the "Launch Application" button below</li>
+                    <li><strong>Explore the Landing Page</strong> - See features, how it works, and trust signals</li>
+                    <li><strong>Try the Dashboard</strong> - Input a job posting to analyze</li>
+                    <li><strong>View Results</strong> - See AI analysis with risk scores</li>
+                </ol>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="section">
+                <h2>✨ Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📄</div>
+                        <h3>Text Analysis</h3>
+                        <p>Grammar check, suspicious keywords, and unrealistic promises detection</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖼️</div>
+                        <h3>Image Analysis</h3>
+                        <p>Logo authenticity and reverse image search verification</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h3>Link Analysis</h3>
+                        <p>Domain reputation, HTTPS security, and phishing detection</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Risk Score</h3>
+                        <p>Comprehensive risk assessment from 0-100 with confidence metrics</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Safety Tips</h3>
+                        <p>Educational content to help you identify red flags</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Works perfectly on desktop, tablet, and mobile devices</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Run -->
+            <div class="section">
+                <h2>💻 How to Run</h2>
+                <p>The application is ready to use! You have two options:</p>
+                
+                <h3 style="color: #1e3a8a; margin-top: 15px;">Option 1: Direct Browser (Easiest)</h3>
+                <p>Simply open <code style="background: #f5f5f5; padding: 2px 6px;">index.html</code> in your web browser.</p>
+                
+                <h3 style="color: #1e3a8a; margin-top: 15px;">Option 2: Local Server (Recommended)</h3>
+                <p>For the best experience, run a local server:</p>
+                <div class="code-box">
+# Windows: Python 3
+python -m http.server 8000
+
+# Mac/Linux: Python 3
+python3 -m http.server 8000
+
+# Using Node.js
+npx http-server
+
+# Then open: http://localhost:8000
+                </div>
+            </div>
+
+            <!-- Test Scenarios -->
+            <div class="section">
+                <h2>🧪 Try These Test Scenarios</h2>
+                <ol>
+                    <li><strong>Legitimate Job:</strong> "Senior Software Engineer at TechCorp, 10+ years experience required, $150k-200k, Full details at careers.techcorp.com"</li>
+                    <li><strong>Suspicious Job:</strong> "Work from home, no experience needed, earn $5000 daily! Send WhatsApp to contact"</li>
+                    <li><strong>Clear Scam:</strong> "Pay $500 registration fee to start, unlimited income, urgent hiring!"</li>
+                </ol>
+            </div>
+
+            <!-- File Structure -->
+            <div class="section">
+                <h2>📂 Project Structure</h2>
+                <div class="code-box">
+Fake_Job/
+├── index.html           (Landing page)
+├── dashboard.html       (Job input form)
+├── results.html         (Analysis results)
+├── assets/
+│   ├── css/
+│   │   └── styles.css   (All styling)
+│   └── js/
+│       ├── main.js      (Dashboard logic)
+│       └── results.js   (Results logic)
+└── README.md            (Full documentation)
+                </div>
+            </div>
+
+            <!-- Important Notes -->
+            <div class="section">
+                <h2>⚠️ Important Notes</h2>
+                <div class="warning">
+                    <strong>Disclaimer:</strong> This is a demonstration UI with simulated AI analysis. The analysis in the demo is randomly generated for showcase purposes. In production, this would integrate with real machine learning models and verification services.
+                </div>
+                <div class="success">
+                    <strong>Privacy:</strong> This demo stores data only in your browser's session storage. No data is sent to any server.
+                </div>
+                <div class="alert">
+                    <strong>Best Practice:</strong> Always verify job opportunities independently with the company before applying or sharing any personal information.
+                </div>
+            </div>
+
+            <!-- Browser Support -->
+            <div class="section">
+                <h2>🌐 Browser Support</h2>
+                <ul>
+                    <li>✅ Chrome 90+</li>
+                    <li>✅ Firefox 88+</li>
+                    <li>✅ Safari 14+</li>
+                    <li>✅ Edge 90+</li>
+                </ul>
+            </div>
+
+            <!-- Customization -->
+            <div class="section">
+                <h2>🎨 Easy Customization</h2>
+                <ul>
+                    <li><strong>Change Colors:</strong> Edit CSS variables in <code style="background: #f5f5f5; padding: 2px 6px;">styles.css</code></li>
+                    <li><strong>Update Text:</strong> Direct edits in HTML files - no build process needed</li>
+                    <li><strong>Add Pages:</strong> Create new .html files and link via navbar</li>
+                    <li><strong>Integrate Backend:</strong> Replace sessionStorage with API calls</li>
+                </ul>
+            </div>
+
+            <!-- Support Section -->
+            <div class="section">
+                <h2>❓ Need Help?</h2>
+                <ol>
+                    <li>Open browser Developer Tools (F12) to check for any errors</li>
+                    <li>Ensure all files are in the correct directory structure</li>
+                    <li>Clear browser cache if styles aren't loading</li>
+                    <li>Try using a local server instead of opening files directly</li>
+                    <li>Check that JavaScript is enabled in your browser</li>
+                </ol>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <a href="index.html" class="btn btn-primary">🚀 Launch Application</a>
+                <a href="README.md" class="btn btn-secondary">📖 Full Documentation</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>JobShield AI v1.0 | A Modern Fake Job Detection System UI</p>
+            <p>Created in 2026 | No external dependencies required</p>
+        </div>
+    </div>
+</body>
+</html>
